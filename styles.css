@@ -1,3 +1,13 @@
+.info{
+    font-family: "Roboto";
+    font-size: 30px;
+    color: #0D47A1;
+    width: 800px;
+    background-color: #E3F2FD;
+    text-align: center;
+    margin: 0px auto 0px auto;
+}
+
 .vertical-menu {
     position: absolute;
     top: 40%;
