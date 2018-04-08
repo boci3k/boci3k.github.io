@@ -1,0 +1,26 @@
+.vertical-menu {
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 1vh;
+    margin: 0px auto 0px auto;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Roboto";
+}
+
+.vertical-menu a {
+    background-color: #0D47A1;
+    color: #E3F2FD;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border: solid 2px #0D47A1;
+}
+
+.vertical-menu a:hover {
+    background-color: #E3F2FD;
+    color: #0D47A1;
+    border: solid 2px #0D47A1;
+}

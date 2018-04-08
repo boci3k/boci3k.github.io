@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang=>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="devices.min.css" type="text/css">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn_font_color_red").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_color", "rgba(244, 67, 54, 1)");
+                $(".km_a1").get(0).style.setProperty("--mk_bg_color", "rgba(229, 229, 229, 1)");
+                $(".km_a1").get(0).style.setProperty("--mk_color", "rgba(37, 40, 57, 1)");
+                $(".km_a2").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_a2").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+                $(".km_a3").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_a3").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+            });
+            $("#btn_font_color_green").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_color", "rgba(76, 175, 80, 1)");
+                $(".km_a1").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_a1").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+                $(".km_a2").get(0).style.setProperty("--mk_bg_color", "rgba(229, 229, 229, 1)");
+                $(".km_a2").get(0).style.setProperty("--mk_color", "rgba(37, 40, 57, 1)");
+                $(".km_a3").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_a3").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+            });
+            $("#btn_font_color_blue").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_color", "rgba(33, 150, 243, 1)");
+                $(".km_a1").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_a1").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+                $(".km_a2").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_a2").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+                $(".km_a3").get(0).style.setProperty("--mk_bg_color", "rgba(229, 229, 229, 1)");
+                $(".km_a3").get(0).style.setProperty("--mk_color", "rgba(37, 40, 57, 1)");
+            });
+
+            $("#btn_bg_color_light").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_bg_color", "rgba(229, 229, 229, 1)");
+                $(".km_b1").get(0).style.setProperty("--mk_bg_color", "rgba(229, 229, 229, 1)");
+                $(".km_b1").get(0).style.setProperty("--mk_color", "rgba(37, 40, 57, 1)");
+                $(".km_b2").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_b2").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+            });
+            $("#btn_bg_color_dark").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_bg_color", "rgba(25, 25, 25, 1)");
+                $(".km_b1").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_b1").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+                $(".km_b2").get(0).style.setProperty("--mk_bg_color", "rgba(229, 229, 229, 1)");
+                $(".km_b2").get(0).style.setProperty("--mk_color", "rgba(37, 40, 57, 1)");
+            });
+
+            $("#btn_sans").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_font-family", "Roboto");
+                $(".km_c1").get(0).style.setProperty("--mk_bg_color", "rgba(229, 229, 229, 1)");
+                $(".km_c1").get(0).style.setProperty("--mk_color", "rgba(37, 40, 57, 1)");
+                $(".km_c2").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_c2").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+            });
+            $("#btn_serif").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_font-family", "Roboto Slab");
+                $(".km_c1").get(0).style.setProperty("--mk_bg_color", "rgba(37, 40, 57, 1)");
+                $(".km_c1").get(0).style.setProperty("--mk_color", "rgba(229, 229, 229, 1)");
+                $(".km_c2").get(0).style.setProperty("--mk_bg_color", "rgba(229, 229, 229, 1)");
+                $(".km_c2").get(0).style.setProperty("--mk_color", "rgba(37, 40, 57, 1)");
+            });
+
+            /* ----- Pozostałe opcje -----*/
+
+            $("#btn_phone_bgc_cp").on('click', function () {
+                $(":root").get(0).style.setProperty("--phone_bg_color", $("#phone_bgc").val());
+            });
+
+            $("#btn_keyboard_keyc").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_color", $("#keyboard_keyc").val());
+            });
+
+            $("#btn_keyboard_bgc").on('click', function () {
+                $(":root").get(0).style.setProperty("--key_bg_color", $("#keyboard_bgc").val());
+            });
+        });
+    </script>
+</head>
+
+<body ng-app="BlankApp" ng-cloak>
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <!-- Your application bootstrap  -->
+    <script type="text/javascript">angular.module('BlankApp', ['ngMaterial']);</script>
+
+    <!-- Lecimy  -->
+
+    <div layout="row">
+        <div flex>
+            <div layout="column" class="menu_wraper">
+                <div class="menu1">
+                    <div class="menu_title">Główne zmienne</div>
+                    <div class="menu_row">
+                        <p class="menu_option">&#10149 Kolor czcionki</p>
+                        <input class="key_menu km_a1" type="button" id="btn_font_color_red" value="Czerwone" />
+                        <input class="key_menu km_a2" type="button" id="btn_font_color_green" value="Zielone" />
+                        <input class="key_menu km_a3" type="button" id="btn_font_color_blue" value="Niebieskie" />
+                    </div>
+                    <div class="menu_row">
+                        <p class="menu_option">&#10149 Kolor tła</p>
+                        <input class="key_menu km_b1" type="button" id="btn_bg_color_light" value="Jasne" />
+                        <input class="key_menu km_b2" type="button" id="btn_bg_color_dark" value="Ciemne" />
+                    </div>
+                    <div class="menu_row">
+                        <p class="menu_option">&#10149 Rodzaj czcionki</p>
+                        <input class="key_menu km_c1" type="button" id="btn_sans" value="Sans" />
+                        <input class="key_menu km_c2" type="button" id="btn_serif" value="Serif" />
+                    </div>
+                </div>
+                <div class="menu2">
+                    <div class="menu_title">Dodatkowe opcje</div>
+                    <div class="menu_row">
+                        <p class="menu_option">&#10149 Kolor ekranu</p>
+                        <input class="key_menu key_menu_cp" type="color" id="phone_bgc" value="#808080">
+                        <input class="key_menu km_d1" type="button" id="btn_phone_bgc_cp" value="Ustaw" />
+                    </div>
+                    <div class="menu_row">
+                        <p class="menu_option">&#10149 Kolor czcionki</p>
+                        <input class="key_menu key_menu_cp" type="color" id="keyboard_keyc" value="#808080">
+                        <input class="key_menu km_e1" type="button" id="btn_keyboard_keyc" value="Ustaw" />
+                    </div>
+                    <div class="menu_row">
+                        <p class="menu_option">&#10149 Kolor tła</p>
+                        <input class="key_menu key_menu_cp" type="color" id="keyboard_bgc" value="#808080">
+                        <input class="key_menu km_f1" type="button" id="btn_keyboard_bgc" value="Ustaw" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div flex>
+            <div class="main-div marvel-device iphone8 black">
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="volume"></div>
+                <div class="camera"></div>
+                <div class="sensor"></div>
+                <div class="speaker"></div>
+                <div class="screen">
+                    <!-- Content goes here -->
+                    <div class="screen_bg">
+
+                    </div>
+                    <div class="keyboard">
+                        <div class="kr kr1">
+                            <div class="row_1_key keyboard_key">
+                                1
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                2
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                3
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                4
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                5
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                6
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                7
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                8
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                9
+                            </div>
+                            <div class="row_1_key keyboard_key">
+                                0
+                            </div>
+                        </div>
+                        <div class="kr kr2">
+                            <div class="row_2_key keyboard_key">
+                                q
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                w
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                e
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                r
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                t
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                y
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                u
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                i
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                o
+                            </div>
+                            <div class="row_2_key keyboard_key">
+                                p
+                            </div>
+                        </div>
+                        <div class="kr kr3">
+                            <div class="row_3_key keyboard_key">
+                                a
+                            </div>
+                            <div class="row_3_key keyboard_key">
+                                s
+                            </div>
+                            <div class="row_3_key keyboard_key">
+                                d
+                            </div>
+                            <div class="row_3_key keyboard_key">
+                                f
+                            </div>
+                            <div class="row_3_key keyboard_key">
+                                g
+                            </div>
+                            <div class="row_3_key keyboard_key">
+                                h
+                            </div>
+                            <div class="row_3_key keyboard_key">
+                                j
+                            </div>
+                            <div class="row_3_key keyboard_key">
+                                k
+                            </div>
+                            <div class="row_3_key keyboard_key">
+                                l
+                            </div>
+                        </div>
+                        <div class="kr kr4">
+                            <div class="row_4_key keyboard_key">
+                                &#8679
+                            </div>
+                            <div class="row_4_key keyboard_key">
+                                z
+                            </div>
+                            <div class="row_4_key keyboard_key">
+                                x
+                            </div>
+                            <div class="row_4_key keyboard_key">
+                                c
+                            </div>
+                            <div class="row_4_key keyboard_key">
+                                v
+                            </div>
+                            <div class="row_4_key keyboard_key">
+                                b
+                            </div>
+                            <div class="row_4_key keyboard_key">
+                                n
+                            </div>
+                            <div class="row_4_key keyboard_key">
+                                m
+                            </div>
+                            <div class="row_4_key keyboard_key">
+                                &#x232b
+                            </div>
+                        </div>
+                        <div class="kr kr5">
+                            <div class="row_5_key keyboard_key">
+                                &#9776
+                            </div>
+                            <div class="row_5_key keyboard_key">
+                                .
+                            </div>
+                            <div class="row_5_key keyboard_key">
+                                _____
+                            </div>
+                            <div class="row_5_key keyboard_key">
+                                @
+                            </div>
+                            <div class="row_5_key keyboard_key">
+                                &#9166
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="home"></div>
+                <div class="bottom-bar"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

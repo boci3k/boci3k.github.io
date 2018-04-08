@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Badanie</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+
+        var state = 0;
+        var result = [];
+        var setButton = "";
+        var page = 1;
+        var wariant1 = ['F', 'B', 'C', 'F', 'A', 'A', 'L', 'G', 'H', 'E', 'K', 'I', 'I', 'J', 'H', 'G', 'C', 'C', 'D', 'I', 'A', 'L', 'K', 'E', 'J', 'E', 'I', 'B', 'F', 'K', 'H', 'C', 'K', 'D', 'E', 'E', 'G', 'I', 'C', 'I', 'D', 'A', 'J', 'L', 'H', 'J', 'B', 'E', 'D', 'A', 'B', 'K', 'D', 'L', 'K', 'J', 'G', 'A', 'B', 'F', 'G', 'G', 'F', 'C', 'L', 'H'];
+        var wariant2 = ['J', 'D', 'A', 'D', 'B', 'J', 'C', 'F', 'C', 'F', 'J', 'E', 'B', 'H', 'G', 'B', 'I', 'B', 'C', 'L', 'D', 'K', 'I', 'H', 'L', 'B', 'A', 'F', 'C', 'E', 'I', 'E', 'A', 'E', 'J', 'L', 'I', 'F', 'G', 'J', 'I', 'L', 'G', 'G', 'K', 'C', 'J', 'A', 'G', 'H', 'L', 'F', 'K', 'H', 'B', 'D', 'A', 'F', 'H', 'L', 'K', 'E', 'H', 'K', 'D', 'D'];
+
+        window.onload = function() {
+            document.getElementById('war1').innerHTML = '<img src="warianty/' + wariant1[state] + '.png"/>';
+            document.getElementById('war2').innerHTML = '<img src="warianty/' + wariant2[state] + '.png"/>';
+
+            document.getElementById('war1_podpis').innerHTML = '<p>' + wariant1[state] + '</p>';
+            document.getElementById('war2_podpis').innerHTML = '<p>' + wariant2[state] + '</p>';
+
+            document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>';
+        };  
+
+        function funkcjaPX(){
+            if(state < wariant1.length){
+                result.push(wariant1[state] + "_" + wariant2[state] + "_" + setButton);
+                document.getElementById(setButton).checked = false;
+
+                state++;
+                page++;
+
+                document.getElementById('war1').innerHTML = '<img src="warianty/' + wariant1[state] + '.png"/>';
+                document.getElementById('war2').innerHTML = '<img src="warianty/' + wariant2[state] + '.png"/>';
+                document.getElementById('war1_podpis').innerHTML = '<p>' + wariant1[state] + '</p>';
+                document.getElementById('war2_podpis').innerHTML = '<p>' + wariant2[state] + '</p>';
+                document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>';
+
+                if(page == 67){
+                    alert("Dziękuję!");
+                    var textDoc = document.createElement('a');
+
+                    textDoc.href = 'data:attachment/text,' + result;
+                    textDoc.target = '_blank';
+                    textDoc.download = 'badanie_' + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + '.txt';
+                    textDoc.click();
+                }
+            }
+        }
+
+        function funkcjaP1(){
+            setButton = "P1";
+            funkcjaPX();
+        }
+
+        function funkcjaP2(){
+            setButton = "P2";
+            funkcjaPX();
+        }
+        
+        function funkcjaP3(){
+            setButton = "P3";
+            funkcjaPX();
+        }
+        
+        function funkcjaP4(){
+            setButton = "P4";
+            funkcjaPX();
+        }
+        
+        function funkcjaP5(){
+            setButton = "P5";
+            funkcjaPX();
+        }
+        
+        function funkcjaP6(){
+            setButton = "P6";
+            funkcjaPX();
+        }
+        
+        function funkcjaP7(){
+            setButton = "P7";
+            funkcjaPX();
+        }
+        
+        function funkcjaP8(){
+            setButton = "P8";
+            funkcjaPX();
+        }
+
+        function funkcjaP9(){
+            setButton = "P9";
+            funkcjaPX();
+        }
+
+
+        </script>
+    </head>
+    <body>
+        <div class="tytul">
+            <p>Który wariant bardziej Ci się podoba?</p>
+        </div>
+        <div class="warianty">
+            <div class="wariant1" id="war1">
+            </div>
+            <div class="warian2" id="war2">
+            </div>
+            <div class="wariant1_podpis" id="war1_podpis">
+                <p>A</p>
+            </div>
+            <div class="wariant2_podpis" id="war2_podpis">
+                <p>B</p>
+            </div>
+        </div>
+        <div class="ocena_tytul">
+            <p><----- ? -----></p>
+        </div>
+        <div class="ocena">
+            <input class ="ocena_przycisk" id="P1" type="radio" name="odp_ocena" value=1 onclick="funkcjaP1()">
+            <input class ="ocena_przycisk" id="P2" type="radio" name="odp_ocena" value=2 onclick="funkcjaP2()">
+            <input class ="ocena_przycisk" id="P3" type="radio" name="odp_ocena" value=3 onclick="funkcjaP3()">
+            <input class ="ocena_przycisk" id="P4" type="radio" name="odp_ocena" value=4 onclick="funkcjaP4()">
+            <input class ="ocena_przycisk" id="P5" type="radio" name="odp_ocena" value=5 onclick="funkcjaP5()">
+            <input class ="ocena_przycisk" id="P6" type="radio" name="odp_ocena" value=6 onclick="funkcjaP6()">
+            <input class ="ocena_przycisk" id="P7" type="radio" name="odp_ocena" value=7 onclick="funkcjaP7()">
+            <input class ="ocena_przycisk" id="P8" type="radio" name="odp_ocena" value=8 onclick="funkcjaP8()">
+            <input class ="ocena_przycisk" id="P9" type="radio" name="odp_ocena" value=9 onclick="funkcjaP9()">
+        </div>
+        <div class="strony" id="str">
+
+        </div>
+    </body>
+</html>
