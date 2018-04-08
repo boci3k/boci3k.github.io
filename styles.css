@@ -2,10 +2,12 @@
     font-family: "Roboto";
     font-size: 30px;
     color: #0D47A1;
-    width: 800px;
+    width: 700px;
     background-color: #E3F2FD;
     text-align: center;
     margin: 0px auto 0px auto;
+    border-left: 5px solid #0D47A1;
+    padding: 10px;
 }
 
 .vertical-menu {
