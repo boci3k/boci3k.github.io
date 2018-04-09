@@ -68,14 +68,6 @@ body{
     justify-items: center;
 }
 
-.wariant1, .wariant2{
-
-}
-
-.wariant1_podpis, .wariant2_podpis{
-    font-size: 30px;
-}
-
 .ocena{
     display: grid;
     width: 1350px;
@@ -142,6 +134,12 @@ input[type="radio"] + label:active{
 .nav:hover{
     background-color: #d9d9d9;
     cursor: pointer;
+}
+
+.nav:active{
+    background-color: #d9d9d9;
+    margin-top: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
 }
 
 .strony{
