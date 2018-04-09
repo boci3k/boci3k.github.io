@@ -1,13 +1,14 @@
 .info{
     font-family: "Roboto";
-    font-size: 30px;
-    color: #0D47A1;
-    width: 700px;
-    background-color: #E3F2FD;
+    font-size: 20px;
+    color: #B71C1C;
+    width: 750px;
+    background-color: #FFEBEE;
     text-align: center;
     margin: 0px auto 0px auto;
-    border-left: 5px solid #0D47A1;
+    border-left: 5px solid #F44336;
     padding: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .vertical-menu {
@@ -29,6 +30,7 @@
     padding: 10px;
     text-decoration: none;
     border: solid 2px #0D47A1;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 .vertical-menu a:hover {
