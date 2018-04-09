@@ -76,28 +76,72 @@ body{
     font-size: 30px;
 }
 
-.ocena_tytul{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    font-size: 30px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
 .ocena{
     display: grid;
-    width: 900px;
-    grid-template-columns: repeat(9, 100px);
-    grid-template-rows: 50px;
+    width: 1350px;
+    grid-template-columns: repeat(9, 150px);
+    grid-template-rows: 50px 50px;
     align-items: center;
     justify-items: center;
     margin: 0px auto 0px auto;
 }
 
-.ocena_przycisk{
-  height: 25px;
-  width: 25px;
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    margin-top: 70px;
+    border: 0px solid #333232;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.4);
+}
+
+input[type="radio"] + label:hover{
+    background-color: #cccccc;
+}
+
+input[type="radio"] + label:active{
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+    margin-top: 75px;
+}
+
+.ocena_tekst{
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Roboto";
+    color: #191919;
+}
+
+.nav{
+    background-color: #e5e5e5;
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14x;
+    font-family: "Roboto";
+    font-weight: bold;
+    line-height: 40px;
+    color: #191919;
+    margin: 0px auto 0px auto;
+    border: 0px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    user-select: none;
+}
+
+.nav:hover{
+    background-color: #d9d9d9;
+    cursor: pointer;
 }
 
 .strony{
@@ -108,4 +152,5 @@ body{
     text-align: center;
     margin: 0px auto 0px auto;
     font-size: 20px;
+    color: #191919;
 }
