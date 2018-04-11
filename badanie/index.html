@@ -31,10 +31,12 @@
 
                 state++;
                 page++;
-
-                document.getElementById('war1').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(0) + '.png"/>';
-                document.getElementById('war2').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(1)+ '.png"/>';
-                document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>';
+                
+                if(page < 67){
+                    document.getElementById('war1').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(0) + '.png"/>';
+                    document.getElementById('war2').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(1)+ '.png"/>';
+                    document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>'; 
+                }
 
                 if(page == 67){
                     alert("Dziękuję!");
