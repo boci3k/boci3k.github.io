@@ -88,7 +88,7 @@ input[type="radio"] + label{
     height: 25px;
     vertical-align: middle;
     cursor: pointer;
-    background-color: #f2f2f2;
+    background-color: #cccccc;
     border-radius: 50%;
     margin-top: 70px;
     border: 0px solid #333232;
@@ -96,7 +96,7 @@ input[type="radio"] + label{
 }
 
 input[type="radio"] + label:hover{
-    background-color: #cccccc;
+    background-color: #999999;
 }
 
 input[type="radio"] + label:active{
