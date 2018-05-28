@@ -1,40 +1,31 @@
-.info{
-    font-family: "Roboto";
-    font-size: 20px;
-    color: #B71C1C;
-    width: 750px;
-    background-color: #FFEBEE;
-    text-align: center;
-    margin: 0px auto 0px auto;
-    border-left: 5px solid #F44336;
-    padding: 10px;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+body{
+    background-color: #E0E0E0;
 }
 
 .vertical-menu {
-    position: absolute;
-    top: 40%;
-    left: calc(50% - 100px);
     width: 200px;
-    height: 1vh;
-    margin: 0px auto 0px auto;
-    text-align: center;
-    font-size: 24px;
+    text-align: left;
+    font-size: 14px;
     font-family: "Roboto";
 }
 
 .vertical-menu a {
-    background-color: #0D47A1;
-    color: #E3F2FD;
+    background-color: #FAFAFA;
+    color: #0D47A1;
     display: block;
     padding: 10px;
     text-decoration: none;
-    border: solid 2px #0D47A1;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+
 .vertical-menu a:hover {
-    background-color: #E3F2FD;
+    background-color: #EEEEEE;
     color: #0D47A1;
-    border: solid 2px #0D47A1;
+}
+
+#nonActiveMenu{
+    background-color: #0D47A1;
+    color: #FAFAFA;
+    text-align: center;
 }
