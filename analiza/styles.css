@@ -1,0 +1,16 @@
+#matrix1 table{
+    margin-top: 50px;
+}
+
+#matrix1 table, tr, td{
+    border: 1px solid black;
+    text-align: center;
+}
+
+#matrix1 tr{
+    height: 60px;
+}
+
+#matrix1 td{
+    width: 60px;
+}

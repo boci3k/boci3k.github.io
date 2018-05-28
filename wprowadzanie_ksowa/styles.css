@@ -1,0 +1,155 @@
+/* reset css*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* reset css*/
+
+body{
+    font-family: "Roboto";
+}
+
+.tytul{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #191919;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.warianty{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 30px;
+    grid-gap: 5px;
+    align-items: center;
+    justify-items: center;
+    font-size: 100px;
+}
+
+.ocena{
+    display: grid;
+    width: 1350px;
+    grid-template-columns: repeat(9, 150px);
+    grid-template-rows: 50px 50px;
+    align-items: center;
+    justify-items: center;
+    margin: 0px auto 0px auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin-top: 70px;
+    border: 0px solid #333232;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+}
+
+input[type="radio"] + label:hover{
+    background-color: #999999;
+}
+
+input[type="radio"] + label:active{
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+    margin-top: 75px;
+}
+
+.ocena_tekst{
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Roboto";
+    color: #191919;
+}
+
+.nav{
+    background-color: #e5e5e5;
+    width: 220px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14x;
+    font-family: "Roboto";
+    font-weight: bold;
+    line-height: 40px;
+    color: #191919;
+    margin: 0px auto 0px auto;
+    border: 0px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    user-select: none;
+}
+
+.nav:hover{
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+.nav:active{
+    background-color: #d9d9d9;
+    margin-top: 4px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+}
+
+.strony{
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 50px);
+    text-align: center;
+    margin: 0px auto 0px auto;
+    font-size: 20px;
+    color: #191919;
+}

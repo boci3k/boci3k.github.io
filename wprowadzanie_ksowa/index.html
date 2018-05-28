@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="styles.css">
         <script>
 
-        var mainPairs = ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'BC', 'BD', 'BE', 'BF', 'BG', 'BH', 'BI', 'BJ', 'BK', 'BL', 'CD', 'CE', 'CF', 'CG', 'CH', 'CI', 'CJ', 'CK', 'CL', 'DE', 'DF', 'DG', 'DH', 'DI', 'DJ', 'DK', 'DL', 'EF', 'EG', 'EH', 'EI', 'EJ', 'EK', 'EL', 'FG', 'FH', 'FI', 'FJ', 'FK', 'FL', 'GH', 'GI', 'GJ', 'GK', 'GL', 'HI', 'HJ', 'HK', 'HL', 'IJ', 'IK', 'IL', 'JK', 'JL', 'KL'];
+        var mainPairs = ['IL','AF','KG','EC','AL','KJ','DH','JF','CH','AB','JL','KH','DL','GL','CF','IH','EJ','GA','IF','KF','EK','KL','KC','BG','IC','IJ','AH','HL','EA','DJ','IB','CL','AD','HF','IG','IK','ED','LF','GD','EL','GC','GF','FB','CJ','EF','KD','FD','CD','LB','GH','EH','GJ','KB','DB','GE','AJ','AI','AK','HB','CB','EI','JB','JH','ID','CA','EB'];
         var state = 0;
         var result = [];
         var setButton = "";
@@ -17,36 +17,37 @@
 
         var macierzDoAHP = [];
 
-        window.onload = function() {
-            mainPairs.sort(function() { return 0.5 - Math.random() });
+        var tempLiczba;
 
-            document.getElementById('war1').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(0) + '.png"/>';
-            document.getElementById('war2').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(1) + '.png"/>';
+        window.onload = function() {
+
+            document.getElementById('war1').innerHTML = mainPairs[state].charAt(0);
+            document.getElementById('war2').innerHTML = mainPairs[state].charAt(1);
 
             document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>';
         };  
 
         function funkcjaPX(){
             if(state < mainPairs.length){
-                result.push(mainPairs[state].charAt(0) + "_" + mainPairs[state].charAt(1) + "_" + document.getElementById(setButton).value);
+                tempLiczba = document.getElementById(setButton).value
+                if(mainPairs[state].charCodeAt(0) >= mainPairs[state].charCodeAt(1)){
+                    result.push(mainPairs[state].charAt(1) + "_" + mainPairs[state].charAt(0) + "_" + (-1*tempLiczba));
+                    document.getElementById(setButton).checked = false;
+                } else{
+                result.push(mainPairs[state].charAt(0) + "_" + mainPairs[state].charAt(1) + "_" + tempLiczba);
                 document.getElementById(setButton).checked = false;
+                }
 
                 state++;
                 page++;
                 
                 if(page < 67){
-                    document.getElementById('war1').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(0) + '.png"/>';
-                    document.getElementById('war2').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(1)+ '.png"/>';
+                    document.getElementById('war1').innerHTML = mainPairs[state].charAt(0);
+                    document.getElementById('war2').innerHTML = mainPairs[state].charAt(1);
                     document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>'; 
                 }
 
                 if(page == 67){
-                    document.getElementById("tytul").style.display = "none";
-                    document.getElementById("warianty").style.display = "none";
-                    document.getElementById("ocena1").style.display = "none";
-                    document.getElementById("ocena2").style.display = "none";
-                    document.getElementById("nav").style.display = "none";
-                    document.getElementById("str").style.display = "none";
                     alert("Dziękuję!");
 
                     result.sort();
@@ -114,8 +115,8 @@
                 state--;
                 page--;
 
-                document.getElementById('war1').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(0) + '.png"/>';
-                document.getElementById('war2').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(1)+ '.png"/>';
+                document.getElementById('war1').innerHTML = mainPairs[state].charAt(0);
+                document.getElementById('war2').innerHTML = mainPairs[state].charAt(1);
                 document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>';
             }
         }
@@ -123,9 +124,6 @@
         </script>
     </head>
     <body>
-        <div class="tytul" id="tytul">
-            <p>Który wariant bardziej Ci się podoba?</p>
-        </div>
         <div class="warianty" id="warianty">
             <div class="wariant1" id="war1">
             </div>
