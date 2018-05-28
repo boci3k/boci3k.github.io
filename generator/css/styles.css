@@ -1,0 +1,140 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* RESET */
+
+body{
+    background-color: #E0E0E0;
+    font-family: "Roboto";
+}
+.inputPole{
+    padding: 5px;
+    border: solid 2px grey;
+    width: 40%;
+    height: 20px;
+    text-align: center;
+}
+.inputPole:focus{
+    border: solid 2px #e96656;
+    outline: none;
+}
+.kl{
+    float: left;
+    padding-left: 10px;
+}
+.kp{
+    text-align: right;
+    padding-right: 10px
+}
+#lprz{
+    width: 50%; 
+    display: inline-block;
+    float: left;
+    margin-right: 100px;
+
+}
+#pprz{
+    width: calc(50% - 100px);
+    display: inline-block;
+}
+#przycisk1, #przycisk2{
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+#pDodaj{
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+}
+#ileWierszy{
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+}
+#wierszTabeli{
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+#wym1, #wym2, #wym3{
+    text-align: center;
+    width: 100px;
+}
+.komorkaTabeli{
+    width: 60px;
+    margin: 5px;
+    text-align: center;
+}
+#blok1{
+    float: left;
+    width: 500px;
+    height: 700px;
+}
+#blok2{
+    position: absolute;
+    left: 500px;
+    top: 0px;
+    width: 700px;
+    height: 100vh;
+    border: solid 1px #BDBDBD;
+}
+.wiersz{
+    padding: 5px;
+    background-color: #E0E0E0;
+    border-bottom: solid 1px #BDBDBD;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+}
+#pdfV{
+    width: 100%;
+    height: 100%;
+}

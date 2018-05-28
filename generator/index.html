@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html"charset="UTF-8">
+    <title>Generator</title>
+    <script src="js/gen.js"></script>
+    <script src="js/pdfmake.min.js"></script>
+ 	<script src="js/vfs_fonts.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    
+<body>
+    
+    <div id="blok1">
+        <div class="wiersz">
+            <div id="lprz">
+                <input type="button" id ="przycisk1" onclick="stworzWiersze();zapiszDane();genDane()" value="Odśwież"/>
+            </div>
+            <div id="pprz">
+                <input type="button" id ="przycisk2" onclick="pobierzDokument()" value="Pobierz"/>
+            </div>
+        </div>
+        <div class="wiersz">
+            <div class="kl">
+                Zleceniodawca:
+            </div>
+            <div class="kp">
+                <input type="text" class="inputPole" id="zleceniodawca"/>
+            </div>
+        </div>
+        <div class="wiersz">
+            <div class="kl">
+                Czas realizacji (domyślnie 1 dzień):
+            </div>
+            <div class="kp">
+                <input type="text" class="inputPole" id="czas"/>
+            </div>
+        </div>
+        <div class="wiersz">
+            <div class="kl">
+                Przedmiot:
+            </div>
+            <div class="kp">
+            <input type="text" class="inputPole" id="przedmiot"/>
+            </div>
+        </div>
+        <div class="wiersz">
+            <div class="kl">
+                Wymiary XYZ:
+            </div>
+            <div class="kp">
+                <input type="text" class="inputPole" id="wym1"/>
+                <input type="text" class="inputPole" id="wym2"/>
+                <input type="text" class="inputPole" id="wym3"/>
+            </div>
+        </div>
+        <div class="wiersz">
+            <div class="kl">
+                Objętość:
+            </div>
+            <div class="kp">
+                <input type="text" class="inputPole" id="objetosc"/>
+            </div>
+        </div>
+        <div class="wiersz">
+            <div class="kl">
+                Technologia (domyślnie FDM):
+            </div>
+            <div class="kp">
+                <input type="text" class="inputPole" id="technologia"/>
+            </div>
+        </div>
+        <div class="wiersz">
+            <div class="kl">
+                Ile wierszy?
+                <input type="text" class="inputPole" id="ileWierszy"/>
+                
+            </div>
+            <div class="kp">
+                 <input type="button" id ="pDodaj" onclick="dodajWiersz()" value="Wstaw wiersze"/>
+            </div>
+        </div>
+        <div class="wiersz">
+            Wysokość warstwy / Gęstość wypełnienia / Materiał / Ilość / Cena
+        </div>
+        <div class="wiersz">
+            <div id="wierszTabeli"/>
+        </div>
+    </div>
+    <div id="blok2">
+        <iframe id="pdfV"></iframe>
+    </div>
+</body>
+</html>
