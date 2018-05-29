@@ -115,7 +115,7 @@ window.onload = function() {
 
                 lambda = math.multiply(wektor, wektorKolumn);
                 ci = (lambda-12)/(12-1);
-                cr = ci/1,52;
+                cr = ci/1.52;
 
                 /* DRUKUJ MACIERZ */
                 showArray1 += "<table>"
