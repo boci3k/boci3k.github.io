@@ -23,6 +23,8 @@
 
             document.getElementById('war1').innerHTML = mainPairs[state].charAt(0);
             document.getElementById('war2').innerHTML = mainPairs[state].charAt(1);
+            document.getElementById('war11').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(0) + '.JPG"/>';
+            document.getElementById('war22').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(1)+ '.JPG"/>';
 
             document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>';
         };  
@@ -44,6 +46,8 @@
                 if(page < 67){
                     document.getElementById('war1').innerHTML = mainPairs[state].charAt(0);
                     document.getElementById('war2').innerHTML = mainPairs[state].charAt(1);
+                    document.getElementById('war11').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(0) + '.JPG"/>';
+                    document.getElementById('war22').innerHTML = '<img src="warianty/' + mainPairs[state].charAt(1)+ '.JPG"/>';
                     document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>'; 
                 }
 
@@ -127,7 +131,11 @@
         <div class="warianty" id="warianty">
             <div class="wariant1" id="war1">
             </div>
-            <div class="warian2" id="war2">
+            <div class="wariant2" id="war2">
+            </div>
+            <div class="wariant11" id="war11">
+            </div>
+            <div class="wariant22" id="war22">
             </div>
         </div>
         <div class="ocena" id="ocena1">

@@ -1,0 +1,12 @@
+MACIERZ PRZEZ SIEBIE N RAZY AZ 
+
+suma wierszy = wektor
+
+skrocic wektor = wektory / sume wektorow
+
+lambda = wektorkolumn * wektorWlasny(ten do 1)
+
+ci = (lambda-12)/(12-1)
+
+CR = ci / 1,52
+
