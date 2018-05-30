@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Badanie</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+
+        var mainPairs = ['IB','IJ','LC','DE','KJ','JC','CG','GE','EL','IL','FC','LG','DG','AB','JG','BH','HG','CA','CB','AH','CI','LH','FJ','EF','GI','EJ','KF','KA','IA','LK','FH','GA','EH','HK','CE','BJ','JL','JD','AD','KI','IE','GK','KB','KE','EA','AJ','GB','BL','BF','HD','AF','BD','CK','HC','DC','HI','FD','LD','JH','DK','IF','FL','AL','GF','EB','DI'];
+        var state = 0;
+        var result = [];
+        var setButton = "";
+        var page = 1;
+
+        var macierzDoAHP = [];
+
+        var tempLiczba;
+
+        window.onload = function() {
+
+            document.getElementById('war1').innerHTML = mainPairs[state].charAt(0);
+            document.getElementById('war2').innerHTML = mainPairs[state].charAt(1);
+
+            document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>';
+        };  
+
+        function funkcjaPX(){
+            if(state < mainPairs.length){
+                tempLiczba = document.getElementById(setButton).value
+                if(mainPairs[state].charCodeAt(0) >= mainPairs[state].charCodeAt(1)){
+                    result.push(mainPairs[state].charAt(1) + "_" + mainPairs[state].charAt(0) + "_" + (-1*tempLiczba));
+                    document.getElementById(setButton).checked = false;
+                } else{
+                result.push(mainPairs[state].charAt(0) + "_" + mainPairs[state].charAt(1) + "_" + tempLiczba);
+                document.getElementById(setButton).checked = false;
+                }
+
+                state++;
+                page++;
+                
+                if(page < 67){
+                    document.getElementById('war1').innerHTML = mainPairs[state].charAt(0);
+                    document.getElementById('war2').innerHTML = mainPairs[state].charAt(1);
+                    document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>'; 
+                }
+
+                if(page == 67){
+                    alert("Dziękuję!");
+
+                    result.sort();
+
+                    var textDoc = document.createElement('a');
+
+                    textDoc.href = 'data:attachment/text,' + result;
+                    textDoc.target = '_blank';
+                    textDoc.download = 'badanie_' + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + '.txt';
+                    textDoc.click();
+                }
+            }
+        }
+
+        function funkcjaP1(){
+            setButton = "P1";
+            funkcjaPX();
+        }
+
+        function funkcjaP2(){
+            setButton = "P2";
+            funkcjaPX();
+        }
+        
+        function funkcjaP3(){
+            setButton = "P3";
+            funkcjaPX();
+        }
+        
+        function funkcjaP4(){
+            setButton = "P4";
+            funkcjaPX();
+        }
+        
+        function funkcjaP5(){
+            setButton = "P5";
+            funkcjaPX();
+        }
+        
+        function funkcjaP6(){
+            setButton = "P6";
+            funkcjaPX();
+        }
+        
+        function funkcjaP7(){
+            setButton = "P7";
+            funkcjaPX();
+        }
+        
+        function funkcjaP8(){
+            setButton = "P8";
+            funkcjaPX();
+        }
+
+        function funkcjaP9(){
+            setButton = "P9";
+            funkcjaPX();
+        }
+
+        function funkcjaBack(){
+            if(state > 0){
+                result.pop();
+                document.getElementById(setButton).checked = false;
+
+                state--;
+                page--;
+
+                document.getElementById('war1').innerHTML = mainPairs[state].charAt(0);
+                document.getElementById('war2').innerHTML = mainPairs[state].charAt(1);
+                document.getElementById('str').innerHTML = '<p>' + page + ' / 66</p>';
+            }
+        }
+
+        </script>
+    </head>
+    <body>
+        <div class="warianty" id="warianty">
+            <div class="wariant1" id="war1">
+            </div>
+            <div class="warian2" id="war2">
+            </div>
+        </div>
+        <div class="ocena" id="ocena1">
+            <input class ="ocena_przycisk" id="P1" type="radio" name="odp_ocena" value=9 onclick="funkcjaP1()"><label for="P1"></label>
+            <input class ="ocena_przycisk" id="P2" type="radio" name="odp_ocena" value=7 onclick="funkcjaP2()"><label for="P2"></label>
+            <input class ="ocena_przycisk" id="P3" type="radio" name="odp_ocena" value=5 onclick="funkcjaP3()"><label for="P3"></label>
+            <input class ="ocena_przycisk" id="P4" type="radio" name="odp_ocena" value=3 onclick="funkcjaP4()"><label for="P4"></label>
+            <input class ="ocena_przycisk" id="P5" type="radio" name="odp_ocena" value=1 onclick="funkcjaP5()"><label for="P5"></label>
+            <input class ="ocena_przycisk" id="P6" type="radio" name="odp_ocena" value=-3 onclick="funkcjaP6()"><label for="P6"></label>
+            <input class ="ocena_przycisk" id="P7" type="radio" name="odp_ocena" value=-5 onclick="funkcjaP7()"><label for="P7"></label>
+            <input class ="ocena_przycisk" id="P8" type="radio" name="odp_ocena" value=-7 onclick="funkcjaP8()"><label for="P8"></label>
+            <input class ="ocena_przycisk" id="P9" type="radio" name="odp_ocena" value=-9 onclick="funkcjaP9()"><label for="P9"></label>
+        </div>
+        <div class="ocena" id="ocena2">
+            <div class="ocena_tekst">Zdecydowanie<br>bardziej</div>
+            <div class="ocena_tekst">Dużo<br>bardziej</div>
+            <div class="ocena_tekst">Bardziej</div>
+            <div class="ocena_tekst">Nieco<br>bardziej</div>
+            <div class="ocena_tekst">Brak<br>preferencji</div>
+            <div class="ocena_tekst">Nieco<br>bardziej</div>
+            <div class="ocena_tekst">Bardziej</div>
+            <div class="ocena_tekst">Dużo<br>bardziej</div>
+            <div class="ocena_tekst">Zdecydowanie<br>bardziej</div>   
+        </div>
+        <div class="nav" id="nav" onclick="funkcjaBack()">
+            &#xab Poprzednie porównanie
+        </div>
+        <div class="strony" id="str">
+
+        </div>
+    </body>
+</html>
