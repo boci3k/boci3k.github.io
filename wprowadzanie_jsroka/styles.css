@@ -50,30 +50,26 @@ body{
     font-family: "Roboto";
 }
 
-.tytul{
-    width: 100%;
-    text-align: center;
-    font-size: 30px;
-    color: #191919;
-    padding-top: 25px;
-    padding-bottom: 25px;
-}
-
 .warianty{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 30px;
+    grid-template-rows: 40px 400px 20px;
     grid-gap: 5px;
     align-items: center;
     justify-items: center;
-    font-size: 100px;
+    font-size: 30px;
+}
+
+.warianty img{
+    max-height: 400px;
+    max-width: 502px;
 }
 
 .ocena{
     display: grid;
     width: 1080px;
     grid-template-columns: repeat(9, 120px);
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 25px 25px;
     align-items: center;
     justify-items: center;
     margin: 0px auto 0px auto;
@@ -91,7 +87,7 @@ input[type="radio"] + label{
     cursor: pointer;
     background-color: #cccccc;
     border-radius: 50%;
-    margin-top: 70px;
+    margin-top: 20px;
     border: 0px solid #333232;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
 }
@@ -102,7 +98,7 @@ input[type="radio"] + label:hover{
 
 input[type="radio"] + label:active{
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
-    margin-top: 75px;
+    margin-top: 15px;
 }
 
 .ocena_tekst{
@@ -117,13 +113,13 @@ input[type="radio"] + label:active{
 .nav{
     background-color: #e5e5e5;
     width: 220px;
-    height: 40px;
+    height: 25px;
     text-align: center;
     vertical-align: middle;
     font-size: 14x;
     font-family: "Roboto";
     font-weight: bold;
-    line-height: 40px;
+    line-height: 25px;
     color: #191919;
     margin: 0px auto 0px auto;
     border: 0px solid black;
@@ -146,10 +142,10 @@ input[type="radio"] + label:active{
 .strony{
     width: 100px;
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     left: calc(50% - 50px);
     text-align: center;
     margin: 0px auto 0px auto;
-    font-size: 20px;
+    font-size: 15px;
     color: #191919;
 }
