@@ -16,12 +16,12 @@ body{
     display: block;
     padding: 10px;
     text-decoration: none;
+    transition: background-color 0.5s;
 }
 
 
 .vertical-menu a:hover {
     background-color: #EEEEEE;
-    color: #0D47A1;
 }
 
 #nonActiveMenu{

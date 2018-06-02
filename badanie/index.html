@@ -56,7 +56,9 @@
                     textDoc.href = 'data:attachment/text,' + result;
                     textDoc.target = '_blank';
                     textDoc.download = 'badanie_' + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + parseInt(Math.random()*9) + '.txt';
+                    document.body.appendChild(textDoc);
                     textDoc.click();
+                    textDoc.remove();
                 }
             }
         }
