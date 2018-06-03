@@ -56,7 +56,7 @@ skills.push([]);
 skills[0][0] = 'MS Office';
 skills[0][1] = '80%';
 skills.push([]);
-skills[1][0] = 'MS Accesse';
+skills[1][0] = 'MS Access';
 skills[1][1] = '50%';
 skills.push([]);
 skills[2][0] = 'MS Project';
