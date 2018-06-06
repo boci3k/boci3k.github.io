@@ -130,18 +130,18 @@ window.onload = function() {
                 document.getElementById("matrix1").innerHTML = showArray1;
 
                 document.getElementById("wskazniki").innerHTML = "lambda: " + lambda + "<br>" + "ci: " + ci + "<br>" + "cr: " + cr + "<br>Suma wierszy: <br>" + 
-                "A: " + wektor[0] + "<BR>" +
-                "B: " + wektor[1] + "<BR>" +
-                "C: " + wektor[2] + "<BR>" +
-                "D: " + wektor[3] + "<BR>" +
-                "E: " + wektor[4] + "<BR>" +
-                "F: " + wektor[5] + "<BR>" +
-                "G: " + wektor[6] + "<BR>" +
-                "H: " + wektor[7] + "<BR>" +
-                "I: " + wektor[8] + "<BR>" +
-                "J: " + wektor[9] + "<BR>" +
-                "K: " + wektor[10] + "<BR>" +
-                "L: " + wektor[11];
+                wektor[0] + "<BR>" +
+                wektor[1] + "<BR>" +
+                wektor[2] + "<BR>" +
+                wektor[3] + "<BR>" +
+                wektor[4] + "<BR>" +
+                wektor[5] + "<BR>" +
+                wektor[6] + "<BR>" +
+                wektor[7] + "<BR>" +
+                wektor[8] + "<BR>" +
+                wektor[9] + "<BR>" +
+                wektor[10] + "<BR>" +
+                wektor[11];
             }
 
 
