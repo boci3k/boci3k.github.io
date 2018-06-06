@@ -129,7 +129,19 @@ window.onload = function() {
                 showArray1 += "</table>"
                 document.getElementById("matrix1").innerHTML = showArray1;
 
-                document.getElementById("wskazniki").innerHTML = "lambda: " + lambda + "<br>" + "ci: " + ci + "<br>" + "cr: " + cr;
+                document.getElementById("wskazniki").innerHTML = "lambda: " + lambda + "<br>" + "ci: " + ci + "<br>" + "cr: " + cr + "<br>Suma wierszy: <br>" + 
+                "A: " + wektor[0] + "<BR>" +
+                "B: " + wektor[1] + "<BR>" +
+                "C: " + wektor[2] + "<BR>" +
+                "D: " + wektor[3] + "<BR>" +
+                "E: " + wektor[4] + "<BR>" +
+                "F: " + wektor[5] + "<BR>" +
+                "G: " + wektor[6] + "<BR>" +
+                "H: " + wektor[7] + "<BR>" +
+                "I: " + wektor[8] + "<BR>" +
+                "J: " + wektor[9] + "<BR>" +
+                "K: " + wektor[10] + "<BR>" +
+                "L: " + wektor[11];
             }
 
 
