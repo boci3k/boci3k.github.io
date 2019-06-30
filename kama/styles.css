@@ -51,9 +51,14 @@ body{
 	font-size: 24px;
 }
 .btn-move{
-	width: 480px;
-	height: 48px;
+	width: 100vw;
+	height: 200px;
 	font-size: 24px;
+}
+
+img{
+  width: 100vw;
+  height: auto;
 }
 
 .pace {
@@ -141,10 +146,7 @@ body{
 	top: 4px;
   }
   
-  img{
-    width: 100vw;
-    height: auto;
-  }
+ 
   .pace .pace-progress[data-progress-text="0%"]:after { right: -200px }
   .pace .pace-progress[data-progress-text="1%"]:after { right: -198.14px }
   .pace .pace-progress[data-progress-text="2%"]:after { right: -196.28px }
