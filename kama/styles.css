@@ -45,20 +45,31 @@ table {
 body{
 	font-family: 'Roboto';
 }
-#losuj{
-  width: 100vw;
-	height: 48px;
-	font-size: 24px;
-}
+
 .btn-move{
 	width: 100vw;
 	height: 200px;
 	font-size: 24px;
 }
 
-img{
+@media only screen and (orientation: portrait) {
+  img{
+    width: 100vw;
+    height: auto;
+  } 
+}
+
+@media only screen and (orientation: landscape) {
+  img{
+    width: auto;
+    height: calc(100vh - 100px);
+  }
+}
+
+#losuj{
   width: 100vw;
-  height: auto;
+  height: 50px;
+  font-size: 30px;
 }
 
 .pace {
