@@ -6,17 +6,24 @@
     <link rel="stylesheet" href="styles.css">
     <script src="pace.min.js"></script>
     <script>
-        var pos = "";
+        function waiting(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms))
+        }
         function losuj(){
-            pos = "png/" + Math.floor((Math.random() * 48) + 1) + ".png";
-            document.getElementById('imgID').src = pos;
+            document.getElementById('imgID').src = "png/" + Math.floor((Math.random() * 48) + 1) + ".png";
+        }
+        async function losujAnimacja(){
+            for(var i=0; i<30; i++){
+                losuj();
+                await waiting(i*5);
+            }
         }
     </script>
 </head>
 
 <body>
 <img id=imgID src="png/0.png" alt="Position">
-<button id="losuj" type="button" onclick="losuj()">LOSUJ</button>
+<button id="losuj" type="button" onclick="losujAnimacja()">LOSUJ</button>
 
 <div class="hidden">
 	<script type="text/javascript">
