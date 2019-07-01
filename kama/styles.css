@@ -47,6 +47,11 @@ body{
   background-color: #212121;
 }
 
+#container{
+  height: 100vh;
+  position: relative;
+}
+
 .btn-move{
 	width: 100vw;
 	height: 200px;
@@ -69,8 +74,20 @@ body{
 
 #losuj{
   width: 100vw;
-  height: 50px;
-  font-size: 30px;
+  height: 10vh;
+  font-size: 8vh;
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+}
+
+#animuj{
+  width: 100vw;
+  height: 10vh;
+  font-size: 8vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .pace {
