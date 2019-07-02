@@ -9,6 +9,8 @@
         var losujStatus = true;
         var animStatus = false;
         var index = 0;
+        var buttonActiveBg = "#c2185b";
+        var buttonNActiveBg = "#757575";
         function waiting(ms) {
             return new Promise(resolve => setTimeout(resolve, ms))
         }
@@ -20,8 +22,8 @@
             if(losujStatus==true){
                 animStatus = false;
                 losujStatus = false;
-                document.getElementById('losuj').style.backgroundColor = "#757575";
-                document.getElementById('animuj').style.backgroundColor = "#757575";
+                document.getElementById('losuj').style.backgroundColor = buttonNActiveBg;
+                document.getElementById('animuj').style.backgroundColor = buttonNActiveBg;
                 document.getElementById('emoji').innerHTML +="&#128520";
                 document.getElementById('emoji').innerHTML = "Losujemy...";
                 for(var i=0; i<24; i++){
@@ -41,16 +43,16 @@
         async function animuj(){
             if(animStatus==true){
                 losujStatus = false;
-                document.getElementById('losuj').style.backgroundColor = "#757575";
+                document.getElementById('losuj').style.backgroundColor = buttonNActiveBg;
                 animStatus = false;
-                document.getElementById('animuj').style.backgroundColor = "#757575";
+                document.getElementById('animuj').style.backgroundColor = buttonNActiveBg;
                 document.getElementById('imgID').src = "gif/" + index + ".gif";
                 for (var i=0; i<4; i++){
-                    document.getElementById('emoji').innerHTML +="&#128520";
                     await waiting(1000);
+                    document.getElementById('emoji').innerHTML +="&#128520";
                 }
                 losujStatus = true;
-                document.getElementById('losuj').style.backgroundColor = "#c2185b";
+                document.getElementById('losuj').style.backgroundColor = buttonActiveBg;
             }
         }
     </script>
