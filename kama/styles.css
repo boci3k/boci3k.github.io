@@ -49,6 +49,29 @@ html, body{
   height: 100%;
 }
 
+@media only screen and (orientation: landscape) {
+  #container{
+    visibility: hidden;
+    position: absolute;
+    top: -100vh;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  #alert{
+    visibility: hidden;
+    position: absolute;
+    top: -10vh;
+  }
+}
+
+#alert{
+  height: 10vh;
+  font-size: 10vh;
+  line-height: 10vh;
+  color: #c2185b;
+}
+
 #container{
   display: grid;
   grid-template-columns: 100%;
@@ -72,8 +95,9 @@ img{
 
 .button{
   background-color: #c2185b;
-  font-size: 10vh;
+  font-size: 5vh;
   color: #fce4ec;
+  padding: 2vh 0 2vh 0;
 }
 
 .button:active{
@@ -85,7 +109,7 @@ img{
 }
 
 #animuj{
-
+  background-color: #757575;
 }
 
 .pace {

@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles.css">
     <script src="pace.min.js"></script>
     <script>
+        var losujStatus = true;
+        var animStatus = false;
         var index = 0;
         function waiting(ms) {
             return new Promise(resolve => setTimeout(resolve, ms))
@@ -15,25 +17,49 @@
             document.getElementById('imgID').src = "png/" + index + ".png";
         }
         async function losujAnimacja(){
-            document.getElementById('emoji').innerHTML = "Losujemy...";
-            for(var i=0; i<30; i++){
-                losuj();
-                await waiting(i*5);
+            if(losujStatus==true){
+                animStatus = false;
+                losujStatus = false;
+                document.getElementById('losuj').style.backgroundColor = "#757575";
+                document.getElementById('animuj').style.backgroundColor = "#757575";
+                document.getElementById('emoji').innerHTML +="&#128520";
+                document.getElementById('emoji').innerHTML = "Losujemy...";
+                for(var i=0; i<24; i++){
+                    losuj();
+                    await waiting(i*10);
+                    if(i==23){
+                        losujStatus = true;
+                        document.getElementById('losuj').style.backgroundColor = "#c2185b";
+                    }
+                }
+                document.getElementById('emoji').innerHTML = "&#128520";
+                document.getElementById('animuj').style.backgroundColor = "#c2185b";
+                animStatus = true;
+
             }
-            document.getElementById('emoji').innerHTML = "&#128520";
         }
         async function animuj(){
-            document.getElementById('imgID').src = "gif/" + index + ".gif";
-            for (var i=0; i<4; i++){
-                document.getElementById('emoji').innerHTML +="&#128520";
-                await waiting(1000);
+            if(animStatus==true){
+                losujStatus = false;
+                document.getElementById('losuj').style.backgroundColor = "#757575";
+                animStatus = false;
+                document.getElementById('animuj').style.backgroundColor = "#757575";
+                document.getElementById('imgID').src = "gif/" + index + ".gif";
+                for (var i=0; i<4; i++){
+                    document.getElementById('emoji').innerHTML +="&#128520";
+                    await waiting(1000);
+                }
+                losujStatus = true;
+                document.getElementById('losuj').style.backgroundColor = "#c2185b";
             }
         }
     </script>
 </head>
 
 <body>
-
+<div id="alert">
+    Używaj na telefonie w pionowej orientacji!
+</div>
 <div id="container">
 
 <img id=imgID src="png/0.png" alt="Position">
