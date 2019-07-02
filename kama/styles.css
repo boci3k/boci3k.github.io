@@ -94,7 +94,6 @@ img{
 }
 
 .button{
-  background-color: #c2185b;
   font-size: 5vh;
   color: #fce4ec;
   padding: 2vh 0 2vh 0;
@@ -105,7 +104,7 @@ img{
 }
 
 #losuj{
-
+  background-color: #c2185b;
 }
 
 #animuj{
